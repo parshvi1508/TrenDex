@@ -68,10 +68,7 @@ def add_moving_averages(data, sma_period=20, ema_period=50):
 
 def plot_candlestick(data, sma_period=20, ema_period=50):
     fig = go.Figure(data=[go.Candlestick(x=data.index,
-                                        open=data['Open'],
-                                        high=data['High'],
-                                        low=data['Low'],
-                                        close=data['Close'],
+                                        open=data['Open'],high=data['High'],low=data['Low'],close=data['Close'],
                                         name='Candlesticks'),
                          go.Scatter(x=data.index, y=data['SMA'], mode='lines', name=f'SMA {sma_period}'),
                          go.Scatter(x=data.index, y=data['EMA'], mode='lines', name=f'EMA {ema_period}')
