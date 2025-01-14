@@ -10,6 +10,9 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from streamlit_option_menu import option_menu
 import comparison
+import history
+import predictions
+import tech_ind as ti
 
 st.title("TrenDex: Stock Price Trend Predictor")
 
@@ -158,10 +161,11 @@ elif selected == "Compare":
     comparison.render(start_date, end_date)
 
 elif selected == "Stock History":
-    st.write("Stock History Page")
+    
+    history.render_stock_history()
 
 elif selected == "Predictions":
-    st.write("Predictions Page")
+    predictions.render_predictions()
 
 elif selected == "Technical Indicators":
-    st.write("Technical Indicators Page")
+    ti.render_technical_indicators()
